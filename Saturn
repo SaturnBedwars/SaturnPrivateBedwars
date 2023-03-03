@@ -1,0 +1,211 @@
+local library = loadstring(game.HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua", true))()
+local window = library.CreateLib("Saturn 1.0 RELEASE - PRIVATE VERSION" , "DarkTheme")
+
+-- Saturn
+local Bedwars = window:NewTab("Saturn Bedwars")
+local Bedwars_Section = Bedwars:NewSection("Saturn PRIVATE Bedwars")
+
+
+Bedwars_Section:NewSlider("Speed", "Changes your speed", 500, 16, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    
+end)
+
+Bedwars_Section:NewSlider("JumpPower", "Makes you jump higher", 350, 50, function()
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+Bedwars_Section:NewButton("Diamond Grabber", "Grabs diamonds", function()
+    spawn(function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").ItemDrops.diamond.CFrame
+                end)
+            end
+        end
+
+Bedwars_Section:NewButton("Infinite Jump", "Jump multiple times in the air and not fall in the void", function()
+   getgenv().InfiniteJump = true;
+			game:GetService("UserInputService").jumpRequest:Connect(function()
+				wait(0.0006)
+				if getgenv().InfiniteJump == true then
+					wait(0.006)
+					game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass"Humanoid":ChangeState("Jumping")
+					wait(0.0006)
+					game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass"Humanoid":ChangeState("freefall")
+				end
+			end)
+		else
+			getgenv().InfiniteJump = false;
+		end
+	end
+
+Bedwars_Section:NewButton("DragonBreathe", "Breathes Xu'rot breath at players", function()
+   		while true do task.wait(0.3)
+					local args = {
+						[1] = {
+							["player"] = game:GetService("Players").LocalPlayer
+						}
+					}
+					game:GetService("ReplicatedStorage"):WaitForChild("rbxts_include"):WaitForChild("node_modules"):WaitForChild("@rbxts"):WaitForChild("net"):WaitForChild("out"):WaitForChild("_NetManaged"):WaitForChild("DragonBreath"):FireServer(unpack(args))
+					
+				end			
+            end
+        end
+
+Bedwars_Section:NewButton("ConfettiPlayerAnnoyer", "Annoys other players with a annoying sound effect", function()
+   			while true do task.wait(0.3)
+						game:GetService("ReplicatedStorage"):WaitForChild("events-@easy-games/game-core:shared/game-core-networking@getEvents.Events"):WaitForChild("useAbility"):FireServer("PARTY_POPPER")
+				end			
+            end
+        end
+
+
+
+--Jailbreak Game Hack
+local Jailbreak = window:NewTab("Jailbreak")
+local Jailbreak_Section = Jailbreak:NewSection("Jailbreak")
+
+Jailbreak_Section:NewButton("JailMonkey", "Jail Monkey ", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeyScripts/main/JailMonkey.lua"))()
+
+end)
+
+Jailbreak_Section:NewButton("Jailbreaker", "Executes jailbreaker", function()
+    loadstring(game:HttpGet('https://scripts.luawl.com/14245/JailbreakerFree.lua'))()
+end)
+
+--Credits
+
+local Credits = window:NewTab("Credits")
+local Credits_Sections = Credits:NewSection("Owner Credits")
+
+Credits_Sections:NewButton("Credits to Triple#7320 and $ .lucid#4775", "Credits to Owners and Devs", function()
+    print("credits")
+end)
+
+
+
+-- MM2 HACKS
+
+local mm2 = window:NewTab("Murder Mystery 2")
+local mm2_section = mm2:NewSection("Murder Mystery 2 Hacks")
+mm2_section:NewButton("Eclipse", "Auto coin farm", function()
+    loadstring(game.HttpGet("https://raw.githubusercontent.com/Ethanoj1/EclipseMM2/master/Script"))()
+end)
+
+
+-- Build a Boat for Treasure Hack
+
+local babft = window:NewTab("Build a Boat For Treasure")
+local babft_sec = babft:NewSection("Build A Boat Hacks")
+
+babft_sec:NewButton("Caspers Config", "Executes caspers config", function()
+    _G.RedGUI = true
+    _G.Theme = "Dark" -- Must disable or remove _G.RedGUI to use
+    --Themes: Light, Dark, Mocha, Aqua and Jester
+    _G.V3rmillion = true
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/BuildABoatForTreasure.lua"))()
+end)
+
+babft_sec:NewButton("Ruby Hub", "Executes ruby hub", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Deni210/BABFT/main/Ruby%20Hub", true))()
+end)
+
+-- Blox Fruits Hack
+local bloxf = window:NewTab("Blox Fruits")
+local bloxf_sec = bloxf:NewSection("Keyless Scripts")
+local bloxf_keysec = bloxf:NewSection("Key Scripts")
+local bloxf_others = bloxf:NewSection("Others")
+
+bloxf_sec:NewButton("Ren's Hub | Blox Fruits", "Executes ren's hub", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/SHAREHACK/bloxfruit/main/free'))()
+end)
+
+-- K.A.T Hacks
+local Kat = window:NewTab("K.A.T")
+local kat_sec = Kat:NewSection("K.A.T Hacks")
+
+kat_sec:NewButton("lel69 Hub", "Executes lel69 hub", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/lel69/KAT/main/GUI"))()
+end) 
+
+-- Super Striker League
+
+local SS_League = window:NewTab("Super Striker League")
+local ssl_section = SS_League:NewSection("SS League Hacks")
+
+ssl_section:NewButton("SuperStriker UI", "Executes The UI in SSL", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/SuperStriker1/main/League"))()
+end)
+
+-- Doors
+
+local door = window:NewTab("Doors")
+local door_sec = door:NewSection("Doors Hacks")
+
+door_sec:NewButton("Brickmane hack", "Executes brickmane hack", function()
+    local Keybind = Enum.KeyCode.H
+    local CanSkipRoom_50 = true
+    local CanAutoUnlockDoors = true
+    local CanPullTheLevers = true
+    local cooldown = true
+    local cooldownwait = 0.5
+    
+    do
+        local UIS = game:GetService("UserInputService")
+        local CF = CFrame.new
+        local LatestRoom = game:GetService("ReplicatedStorage").GameData.LatestRoom
+    
+        UIS.InputBegan:Connect(function(input, typing)
+            if typing then return end
+            if input.KeyCode == Keybind then
+                if not cooldown then return end
+                pcall(function()
+                    cooldown = false
+                    local key = false
+                    local lever = false
+                    local CurrentDoor = workspace.CurrentRooms[tostring(game:GetService("ReplicatedStorage").GameData.LatestRoom.Value)]:WaitForChild("Door")
+                    for _,object in ipairs(CurrentDoor.Parent:GetDescendants()) do
+                        if object.Name == "KeyObtain" then
+                            key = object
+                        end
+                    end
+                    for _,object in ipairs(CurrentDoor.Parent:GetDescendants()) do
+                        if object.Name == "LeverForGate" then
+                            lever = object
+                        end
+                    end
+                    if LatestRoom.Value == 50 and CanSkipRoom_50 == true then
+                        CurrentDoor = workspace.CurrentRooms[tostring(LatestRoom.Value + 1)]:WaitForChild("Door")
+                        game.Players.LocalPlayer.Character:PivotTo(CF(CurrentDoor.Door.Position))
+                    else
+                        if key and CanAutoUnlockDoors == true then
+                            game.Players.LocalPlayer.Character:PivotTo(CF(key.Hitbox.Position))
+                            task.wait(.3)
+                            fireproximityprompt(key.ModulePrompt)
+                            task.wait(.3)
+                            game.Players.LocalPlayer.Character:PivotTo(CF(CurrentDoor.Door.Position))
+                            task.wait(.3)
+                            fireproximityprompt(CurrentDoor.Lock.UnlockPrompt)
+                        end
+                        if lever and CanPullTheLevers == true then
+                            game.Players.LocalPlayer.Character:PivotTo(CF(lever.Main.Position))
+                            task.wait(.3)
+                            fireproximityprompt(lever.ActivateEventPrompt)
+                            task.wait(.3)
+                            game.Players.LocalPlayer.Character:PivotTo(CF(CurrentDoor.Door.Position))
+                        end
+                        game.Players.LocalPlayer.Character:PivotTo(CF(CurrentDoor.Door.Position))
+                    end
+                    task.wait(.45)
+                    CurrentDoor.ClientOpen:FireServer()
+                    task.wait(cooldownwait)
+                    cooldown = true
+                end)
+            end
+        end)
+    end
+end)
+
+----- Modules Message
+game.StarterGui:SetCore("ChatMakeSystemMessage",  { Text = "Saturn Private loaded!", Color = Color3.fromRGB(255, 0, 0), Font = Enum.Font.FredokaOne, FontSize = Enum.FontSize.Size24 } )
+game.StarterGui:SetCore("ChatMakeSystemMessage",  { Text = "Thank you for purchasing Saturn!", Color = Color3.fromRGB(255, 0, 0), Font = Enum.Font.FredokaOne, FontSize = Enum.FontSize.Size24 } )
