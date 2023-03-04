@@ -206,6 +206,4 @@ door_sec:NewButton("Brickmane hack", "Executes brickmane hack", function()
     end
 end)
 
------ Modules Message
-game.StarterGui:SetCore("ChatMakeSystemMessage",  { Text = "Saturn Private loaded!", Color = Color3.fromRGB(255, 0, 0), Font = Enum.Font.FredokaOne, FontSize = Enum.FontSize.Size24 } )
-game.StarterGui:SetCore("ChatMakeSystemMessage",  { Text = "Thank you for purchasing Saturn!", Color = Color3.fromRGB(255, 0, 0), Font = Enum.Font.FredokaOne, FontSize = Enum.FontSize.Size24 } )
+
